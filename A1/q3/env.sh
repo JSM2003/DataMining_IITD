@@ -5,7 +5,7 @@ set -e  # Exit immediately on error
 # -------- Configuration --------
 MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
 INSTALL_DIR="$HOME/miniconda3"
-ENV_NAME="DM_A1_q3"
+ENV_NAME="T11_DM_A1_q3"
 INSTALLER="Miniconda3-latest-Linux-x86_64.sh"
 
 # -------- Check for Miniconda --------
@@ -33,14 +33,11 @@ fi
 # -------- Check / Create Environment --------
 if conda env list | awk '{print $1}' | grep -qx "$ENV_NAME"; then
     echo "Conda environment '$ENV_NAME' already exists."
+    conda activate "$ENV_NAME"
 else
     echo "Creating Conda environment '$ENV_NAME'..."
-    conda create -y -n "$ENV_NAME" python=3.10
+    conda create -y -n "$ENV_NAME" python=3.10.19
+    conda activate "$ENV_NAME"
+    pip install numpy networkx tqdm
 fi
 
-echo "-----------------------------------"
-echo "Setup complete."
-echo "To start working:"
-echo "  source ~/.bashrc"
-echo "  conda activate $ENV_NAME"
-echo "-----------------------------------"

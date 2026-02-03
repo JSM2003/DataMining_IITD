@@ -1,4 +1,5 @@
-DATA_PATH=$1
-OUT_PATH=$2
+#!/bin/bash
+set -e
 
-python identify.py $1 $2
+DB_GRAPHS=$1
+OUT_FEATURES=$2
