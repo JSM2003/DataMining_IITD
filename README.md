@@ -4,7 +4,34 @@
 ## Assignment 1
 
 #### 1) Frequent Itemset Mining
+1.1: Folder Structure 
+``` 
+./
+├── q1_1.sh
+├── q1_2.sh
+├── q1.pdf
+├── generate_dataset.py
+├── plot.py
+```
+1.2: Run
+```
+bash q1_1.sh <path_apriori_executable> <path_fp_executable> <path_dataset>
+<path_out>
 
+# <path_apriori_executable>: absolute filepath to apriori's compiled
+executable
+# <path_fp_executable>: absolute filepath to fp-tree's compiled executable
+# <path_dataset>: absolute filepath to the dataset file
+# <path_out>: absolute folderpath where the plot and the outputs at different
+thresholds will be saved
+``` 
+```
+bash q1_2.sh <universal_itemset> <num_transactions>
+
+# <universal_itemset>: superset of distinct items possible across all
+transactions
+# <num_transactions>: number of transactions in the dataset
+```
 #### 2) Frequent Subgraph Mining
 2.1: Folder Structure
 ```
