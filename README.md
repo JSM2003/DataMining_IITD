@@ -6,6 +6,36 @@
 #### 1) Frequent Itemset Mining
 
 #### 2) Frequent Subgraph Mining
+2.1: Folder Structure
+```
+./
+├── graph_lib_binaries/
+│   ├── fsg*
+│   ├── gaston*
+│   └── gSpan*
+├── plot_scripts/
+│   └── results_plot.py
+├── preproc_scripts/
+│   ├── fsg_data_adaptor.py
+│   └── gspan_gaston_data_adaptor.py
+├── q2.sh*
+├── raw_dataset/
+│   └── yeast_167.txt_graph
+└── q2.pdf
+```
+
+2.2: Run
+```
+bash q2.sh <path_gspan_executable> <path_fsg_executable>
+<path_gaston_executable> <path_dataset> <path_out>
+
+# <path_gspan_executable>: absolute filepath to gspan's compiled executable
+# <path_fsg_executable>: aboslute filepath to fsg's compiled executable
+# <path_gaston_executable>: aboslute filepath to gaston's compiled executable
+# <path_dataset>: absolute filepath to the dataset file
+# <path_out>: absolute folderpath where the plot and the outputs at different
+minimum supports will be saved
+```
 
 #### 3) Graph Indexing
 3.1: Folder Structure 
