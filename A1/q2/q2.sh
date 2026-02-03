@@ -128,5 +128,7 @@ echo "[INFO] Plotting execution results"
 python3 "$SCRIPT_DIR/plot_scripts/results_plot.py" "$execution_results_file"
 
 echo "[INFO] Completed plotting the results"
+
+rm -f "$execution_results_file"
 echo
 
