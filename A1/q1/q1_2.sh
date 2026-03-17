@@ -1,0 +1,6 @@
+#!/bin/bash
+
+UNIVERSE_SIZE=$1
+NUM_TRANSACTIONS=$2
+
+python3 generate_dataset.py $UNIVERSE_SIZE $NUM_TRANSACTIONS
